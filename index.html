@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pajar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Warna dan font kustom, bisa dipakai sebagai class: bg-hijau, text-hijau, font-sans, dst.
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hijau: { DEFAULT: '#8E1616', tua: '#8E1616', muda: '#D84040', badge: '#D84040' },
+                        latar: '#EEEEEE'
+                    },
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <!-- Ikon dan font -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-latar font-sans text-gray-900">
+    <nav class="sticky top-0 z-50 bg-hijau-muda shadow-md">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 ">
+            <a href="#home" class="flex items-center gap-2 text-2xl text-latar">
+                <i class="bi bi-code-slash"></i> Portofolio Saya
+            </a>
+            <button class="text-3xl lg:hidden" aria-label="menu"
+                onclick="document.getElementById('menu').classList.toggle('hidden')">
+                <i class="bi bi-list"></i>
+            </button>
+            <!-- Menu: tersembunyi di HP, tampil mendatar di layar lg -->
+            <ul id="menu"
+                class="absolute left-0 top-full hidden w-full flex-col gap-4 px-4 pb-4 shadow-md lg:static lg:flex lg:w-auto lg:flex-row lg:gap-8 lg:p-0 lg:shadow-none">
+                <li><a href="#home" class="font-medium text-latar">Home</a></li>
+                <li><a href="#tentang" class="font-medium text-latar hover:text-hijau">Tentang</a></li>
+                <li><a href="#project" class="font-medium text-latar hover:text-hijau">Project</a></li>
+                <li><a href="#kontak" class="font-medium text-latar hover:text-hijau">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="scroll-mt-20 py-10 lg:py-16">
+        <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-12">
+            <!-- Kolom teks -->
+            <div class="lg:col-span-7 px-12">
+                <span class="inline-block rounded-full bg-hijau-badge px-4 py-2 text-latar">Mahasiswa UBSI kota
+                    Tasikmalaya</span>
+                <h1 class="mt-6 text-4xl font-bold leading-snug md:text-5xl">
+                    Halo, Saya <span class="text-hijau-muda">Pajar Azmi Anugraha</span>
+                </h1>
+                <p class="my-6 text-lg leading-relaxed text-gray-600 text-justify">Halo, saya Pajar Azmi Anugraha —
+                    seorang Web Developer yang berada di Jawa Barat, Indonesia. Spesialisasi dalam PHP, Laravel,
+                    JavaScript, dan Tailwind CSS.</p>
+                <div class="flex flex-col gap-3 sm:flex-row">
+                    <a href="#project"
+                        class="rounded-lg bg-hijau-muda px-6 py-3 text-center text-lg text-white hover:bg-gray-800">Lihat
+                        Project <i class="bi bi-arrow-down ml-2"></i></a>
+                    <a href="#kontak"
+                        class="rounded-lg bg-hijau-muda px-6 py-3 text-center text-lg text-white hover:bg-hijau-tua">Hubungi
+                        Saya <i class="bi bi-send-fill ml-2"></i></a>
+                </div>
+            </div>
+            <!-- Kartu profil -->
+            <div class="lg:col-span-5">
+                <div class="rounded-3xl border border-gray-200 bg-hijau-muda p-8 text-center shadow-lg md:p-12">
+
+                    <!-- Ini adalah bagian yang diubah -->
+                    <img src="profile.png" alt="Foto Pajar Azmi Anugraha"
+                        class="mx-auto mb-6 h-44 w-44 rounded-full border-8 border-hijau object-cover sm:h-60 sm:w-60">
+
+                    <h2 class="font-medium text-latar">Pajar Azmi Anugraha</h2>
+                    <p class="text-latar">Web Developer &amp; UI / UX Design</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-b from-hijau to-hijau-muda py-12 text-white">
+        <div class="mx-auto max-2-6xl px-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-semibold">Tentang Saya</h2>
+                <p class="mt-2 ">mengenal lebih dekat latar belakang posisi dan tingkat keahlian</p>
+            </div>
+            <div class="grid items-start gap-10 lg:grid-cols-2">
+                <div>
+                    <span class="inline-block rounded-lg bg-hijau-muda px-4 py-2 text-latar">Posisi: Web Developer &amp;
+                        UI /
+                        UX Design</span>
+                    <h3 class="mb-4 mt-6 text-2xl ">Semangat Belajar &amp; Berinovasi<br>di Dunia Pemrograman</h3>
+                    <p class="mb-4 leading-loose">Saya adalah seorang mahasiswa UBSI kota Tasikmalaya program studi
+                        Sistem Informasi yang memiliki ketertarikan besar dalam pembuatan website yang responsif,
+                        bersih, dan estetis.</p>
+                    <p class="leading-loose">Melalui mata kuliah Pemrograman Web Dasar, saya terus mengasah kemampuan
+                        logika pemrograman serta tata letak menggunakan HTML, CSS murni, dan prinsip design modern.</p>
+                </div>
+                <div>
+                    <div class="rounded-2xl bg-hijau-muda p-6 text-center shadow-lg">
+                        <h4 class="mb-4 text-xl font-semibold">Keahlian & Kemampuan</h4>
+                        <div class="mt-5">
+                            <div class="flex justify-between">
+                                <span>HTML5</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="mt-1 h-2 bg-gray-200 rounded-full">
+                                <div class="mt-1 h-2 bg-hijau-tua rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div class="flex justify-between">
+                                <span>CSS</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="mt-1 h-2 bg-gray-200 rounded-full">
+                                <div class="mt-1 h-2 bg-hijau-tua rounded-full w-[75%]"></div>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div class="flex justify-between">
+                                <span>PHP</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="mt-1 h-2 bg-gray-200 rounded-full">
+                                <div class="mt-1 h-2 bg-hijau-tua rounded-full w-[80%]"></div>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div class="flex justify-between">
+                                <span>Laravel</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="mt-1 h-2 bg-gray-200 rounded-full">
+                                <div class="mt-1 h-2 bg-hijau-tua rounded-full w-[85%]"></div>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <div class="flex justify-between">
+                                <span>Python</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="mt-1 h-2 bg-gray-200 rounded-full">
+                                <div class="mt-1 h-2 bg-hijau-tua rounded-full w-[70%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="mx-auto max-w-6xl px-4">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-semibold">Project Terbaru</h2>
+                <p class="mt-2">beberapa karya tugas kuliah dan eksplorasi madiri saya semester ini</p>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <article
+                    class="flex flex-col overflow-hidden rounded-xl bg-hijau-muda shadow-md transition hover:-translate-y-1.5 hover:shadow-xl">
+                    <div class="relative h-44">
+                        <img src="project1.jpg" alt="Project 1" class="h-full w-full object-cover">
+                    </div>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="text-sm font-bold text-latar">PROJECT TERBARU</span>
+                        <h3 class="my-3 text-xl font-bold text-latar">Website E-commerce Sederhana</h3>
+                        <p class="mb-6 text-latar">Katalog produk online dengan layout grid responsif, tombol
+                            interaktif, dan tata
+                            letak keranjang belanja sederhana menggunakan HTML dan CSS murni.</p>
+                        <a href="#" class="mt-auto font-bold uppercase text-latar hover:text-hijau">Lihat Detail <i
+                                class="bi bi-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+                <article
+                    class="flex flex-col overflow-hidden rounded-xl bg-hijau-muda shadow-md transition hover:-translate-y-1.5 hover:shadow-xl">
+                    <div class="relative h-44">
+                        <img src="project1.jpg" alt="Project 1" class="h-full w-full object-cover">
+                    </div>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="text-sm font-bold text-latar">PROJECT TERBARU</span>
+                        <h3 class="my-3 text-xl font-bold text-latar">Website E-commerce Sederhana</h3>
+                        <p class="mb-6 text-latar">Katalog produk online dengan layout grid responsif, tombol
+                            interaktif, dan tata
+                            letak keranjang belanja sederhana menggunakan HTML dan CSS murni.</p>
+                        <a href="#" class="mt-auto font-bold uppercase text-latar hover:text-hijau">Lihat Detail <i
+                                class="bi bi-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+                <article
+                    class="flex flex-col overflow-hidden rounded-xl bg-hijau-muda shadow-md transition hover:-translate-y-1.5 hover:shadow-xl">
+                    <div class="relative h-44">
+                        <img src="project2.webp" alt="project 2" class="h-full w-full object-cover">
+                    </div>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="text-sm font-semibold text-latar">PROJECT KULIAH</span>
+                        <h3 class="my-3 text-xl font-bold text-latar">Landing Page Company Profile</h3>
+                        <p class="mb-6 text-latar">Halaman profil perusahaan modern dengan section layanan, testimoni
+                            klien, dan navigasi anchor yang mulus untuk presentasi tugas akhir semester.</p>
+                        <a href="#" class="mt-auto font-bold uppercase text-latar hover:text-hijau">Lihat Detail <i
+                                class="bi bi-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+                <article
+                    class="flex flex-col overflow-hidden rounded-xl bg-hijau-muda shadow-md transition hover:-translate-y-1.5 hover:shadow-xl">
+                    <div class="relative h-44">
+                        <img src="project3.jpg" alt="Project 3" class="h-full w-full object-cover">
+                    </div>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="text-sm font-semibold text-latar">PROJECT AKHIR</span>
+                        <h3 class="my-3 text-xl font-bold text-latar">Aplikasi To-Do List Interaktif</h3>
+                        <p class="mb-6 text-latar">Aplikasi pengelola tugas harian interaktif sederhana berbasis
+                            antarmuka bersih guna memudahkan pencatatan aktivitas perkuliahan sehari-hari.</p>
+                        <a href="#" class="mt-auto font-bold uppercase text-latar hover:text-hijau">Lihat Detail <i
+                                class="bi bi-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="kontak" class="scroll-mt-20 bg-gradient-to-b from-hijau to-hijau-muda py-12 text-white">
+        <div class="mx-auto max-w-6xl px-4">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-semibold">Kontak Saya</h2>
+                <p class="mt-2">Silakan isi formulir di bawah ini jika ingin terhubung atau memberikan masukan.</p>
+            </div>
+            <form class="mx-auto max-w-3xl rounded-2xl bg-hijau-muda p-6 text-gray-900 shadow-xl md:p-12"
+                onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda sudah terkirim.'); this.reset();">
+                <div class="mb-4 grid gap-4 md:grid-cols-2 ">
+                    <div>
+                        <label for="nama" class="mb-1 block text-white">Nama Lengkap</label>
+                        <input type="text" id="nama" placeholder="Masukkan nama lengkap" required
+                            class="w-full rounded-lg border border-gray-300 bg-gray-100 px-4 py-3 focus:border-hijau focus:outline-none focus:ring-2 focus:ring-hijau/30">
+                    </div>
+                    <div>
+                        <label for="email" class="mb-1 block text-white">Email</label>
+                        <input type="email" id="email" placeholder="nama@email.com" required
+                            class="w-full rounded-lg border border-gray-300 bg-gray-100 px-4 py-3 focus:border-hijau focus:outline-none focus:ring-2 focus:ring-hijau/30">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="alamat" class="mb-1 block text-white">Alamat</label>
+                    <input type="text" id="alamat" placeholder="Kota / Domisili anda"
+                        class="w-full rounded-lg border border-gray-300 bg-gray-100 px-4 py-3 focus:border-hijau focus:outline-none focus:ring-2 focus:ring-hijau/30">
+                </div>
+                <div class="mb-6">
+                    <label for="pesan" class="mb-1 block text-white">Pesan</label>
+                    <textarea id="pesan" rows="5" placeholder="Tuliskan pesan atau pertanyaan anda..." required
+                        class="w-full rounded-lg border border-gray-300 bg-gray-100 px-4 py-3 focus:border-hijau focus:outline-none focus:ring-2 focus:ring-hijau/30"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full rounded-lg bg-hijau py-3 text-lg text-white hover:bg-hijau-tua">Kirim Pesan <i
+                        class="bi bi-send-fill ml-2"></i></button>
+            </form>
+        </div>
+    </section>
+    <footer class="bg-black px-4 py-12 text-center text-gray-400">
+        <div class="mb-6 flex justify-center gap-3">
+            <a href="#" aria-label="GitHub"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-700 text-white transition hover:bg-hijau"><i class="bi bi-github"></i></a>
+            <a href="#" aria-label="LinkedIn"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-700 text-white transition hover:bg-hijau"><i
+                    class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-700 text-white transition hover:bg-hijau"><i
+                    class="bi bi-instagram"></i></a>
+        </div>
+        <p class="mb-6 font-bold">&copy; 2026 Pajar Azmi Anugraha.</p>
+        <span class="inline-block rounded-2xl bg-[#25302a] px-8 py-3 font-medium"><i
+                class="bi bi-mortarboard-fill mr-2 text-hijau"></i>Bahan Ajar Web Design - Kelas Reguler</span>
+    </footer>
+</body>
+
+</html>
